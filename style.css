@@ -1,34 +1,4 @@
-/* 1. CORE VARIABLES & THEME */
-:root {
-    --primary: #1a202c; /* Deep Charcoal */
-    --accent: #3182ce;  /* Research Blue */
-    --bg: #ffffff;
-    --text: #4a5568;
-    --border: #e2e8f0;
-    --light-blue: #f0f7ff;
-}
-
-* { box-sizing: border-box; }
-
-html {
-    scroll-behavior: smooth;
-}
-
-body { 
-    font-family: 'Inter', sans-serif; 
-    margin: 0; 
-    color: var(--text); 
-    line-height: 1.6;
-    background: var(--bg);
-}
-
-.container { 
-    max-width: 900px; 
-    margin: 0 auto; 
-    padding: 0 20px; 
-}
-
-/* 2. TOP NAVIGATION BAR */
+/* UPDATED NAVIGATION SECTION */
 .navbar {
     position: sticky;
     top: 0;
@@ -45,15 +15,18 @@ body {
     align-items: center; 
 }
 
+/* This is what removes the underline from SinderLab */
 .logo { 
     font-weight: 800; 
     font-size: 1.4rem; 
     color: var(--primary); 
     letter-spacing: -0.5px; 
-    text-decoration: none;
+    text-decoration: none; /* Removes underline */
 }
 
-.logo span { color: var(--accent); }
+.logo span { 
+    color: var(--accent); 
+}
 
 nav ul { 
     list-style: none; 
@@ -77,150 +50,8 @@ nav a:hover {
     color: var(--accent); 
 }
 
-/* THE ACTIVE HIGHLIGHT (Tells you what page you're on) */
+/* The Blue Highlight for active pages remains */
 nav a.active {
     color: var(--accent) !important;
     border-bottom: 2px solid var(--accent);
-}
-
-/* 3. GENERAL PAGE LAYOUT */
-.page-content { padding: 60px 0; }
-
-.hero { padding: 100px 0 60px; }
-
-h1 { 
-    font-size: 2.8rem; 
-    color: var(--primary); 
-    line-height: 1.1; 
-    margin-bottom: 20px; 
-    letter-spacing: -1px; 
-}
-
-.description { 
-    font-size: 1.25rem; 
-    color: #718096; 
-    max-width: 750px; 
-}
-
-.section-title { 
-    font-size: 1.6rem; 
-    color: var(--primary); 
-    margin: 40px 0 25px; 
-    font-weight: 700; 
-    border-bottom: 2px solid #edf2f7; 
-    padding-bottom: 10px; 
-}
-
-.divider { 
-    border: 0; 
-    border-top: 1px solid var(--border); 
-    margin: 40px 0; 
-}
-
-/* 4. RESEARCH CARDS */
-.grid { 
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    gap: 25px; 
-}
-
-.card { 
-    padding: 25px; 
-    border: 1px solid var(--border); 
-    border-radius: 12px; 
-    transition: 0.2s; 
-}
-
-.card:hover { 
-    border-color: var(--accent); 
-    transform: translateY(-3px); 
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-.card h3 { 
-    margin: 10px 0; 
-    font-size: 1.2rem; 
-    color: var(--primary); 
-}
-
-.tag { 
-    font-size: 0.7rem; 
-    font-weight: 800; 
-    text-transform: uppercase; 
-    color: var(--accent); 
-    background: #ebf8ff; 
-    padding: 3px 8px; 
-    border-radius: 5px; 
-}
-
-/* 5. TEAM & PUBLICATIONS LISTS */
-.member-card { 
-    padding: 15px 0; 
-    border-bottom: 1px solid #f7fafc; 
-    font-size: 1.05rem; 
-}
-
-.pub-entry { 
-    display: flex; 
-    gap: 20px; 
-    margin-bottom: 25px; 
-    align-items: flex-start; 
-}
-
-.year-badge { 
-    background: var(--light-blue); 
-    color: var(--accent); 
-    font-weight: 800; 
-    padding: 5px 10px; 
-    border-radius: 6px; 
-    font-size: 0.8rem; 
-    min-width: 60px; 
-    text-align: center; 
-}
-
-/* 6. CONTACT PAGE STYLES */
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    margin-top: 40px;
-}
-
-.contact-info h3 { margin-top: 30px; font-size: 1.1rem; color: var(--primary); }
-
-.map-placeholder, .hero-image-placeholder {
-    width: 100%;
-    height: 350px;
-    background: #f7fafc;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #a0aec0;
-    border: 2px dashed var(--border);
-}
-
-.join-us {
-    margin-top: 60px;
-    padding: 30px;
-    background: var(--light-blue);
-    border-left: 4px solid var(--accent);
-    border-radius: 0 8px 8px 0;
-}
-
-/* 7. FOOTER */
-footer { 
-    padding: 60px 0; 
-    border-top: 1px solid var(--border); 
-    text-align: center; 
-    font-size: 0.85rem; 
-    color: #a0aec0; 
-    margin-top: 80px;
-}
-
-/* 8. MOBILE RESPONSIVENESS */
-@media (max-width: 800px) {
-    .grid, .contact-grid { grid-template-columns: 1fr; }
-    .nav-flex { flex-direction: column; gap: 15px; }
-    h1 { font-size: 2.2rem; }
 }
