@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sinder Lab | Orthopaedics</title>
+    <title>Sinder Lab | Home</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
@@ -11,83 +11,41 @@
 
     <header class="navbar">
         <div class="container nav-flex">
-            <div class="logo">Sinder<span>Lab</span></div>
+            <a href="index.html" class="logo">Sinder<span>Lab</span></a>
             <nav>
-                <ul id="nav-links">
-                    <li><a href="#home" class="nav-item active">Home</a></li>
-                    <li><a href="#research" class="nav-item">Research</a></li>
-                    <li><a href="#team" class="nav-item">Team</a></li>
-                    <li><a href="#publications" class="nav-item">Publications</a></li>
-                    <li><a href="#news" class="nav-item">News</a></li>
-                    <li><a href="#contact" class="nav-item">Contact</a></li>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main class="container">
+        
         <section id="home" class="hero">
             <h1>Advancing research in Orthopaedics.</h1>
             <p class="description">
-                The <strong>Sinder Lab</strong> specializes in musculoskeletal research, 
-                focusing on clinical outcomes and biomechanical innovations in <strong>Orthopaedics</strong>.
+                The <strong>Sinder Lab</strong> at the Department of Orthopaedics specializes in musculoskeletal research, 
+                combining biomechanical innovation with clinical excellence to improve patient outcomes.
             </p>
+            
+            <div class="hero-image-placeholder">
+                <span>Group Photo / Lab Mission Image Placeholder</span>
+            </div>
         </section>
 
         <hr class="divider">
 
-        <section id="research">
-            <h2 class="section-title">Research Areas</h2>
-            <div class="grid">
-                <div class="card">
-                    <span class="tag">Clinical</span>
-                    <h3>Joint Reconstruction</h3>
-                    <p>Analyzing long-term outcomes and failure modes in total joint arthroplasty.</p>
-                </div>
-                <div class="card">
-                    <span class="tag">Biomechanical</span>
-                    <h3>Fracture Fixation</h3>
-                    <p>Optimizing hardware design for improved stability in complex orthopedic trauma.</p>
-                </div>
-            </div>
+        <section class="home-intro">
+            <h2 class="section-title">Our Mission</h2>
+            <p>Our research focuses on the mechanical and biological factors that influence orthopedic surgery success. From joint reconstruction to fracture fixation, we aim to translate laboratory findings into clinical practice.</p>
         </section>
 
-        <section id="team">
-            <h2 class="section-title">The Team</h2>
-            <div class="team-list">
-                <div class="member"><strong>Dr. Sinder</strong> — Principal Investigator</div>
-                <div class="member"><strong>[Name]</strong> — Orthopedic Resident</div>
-            </div>
-        </section>
-
-        <section id="publications">
-            <h2 class="section-title">Selected Publications</h2>
-            <div class="pub-list">
-                <div class="pub-item">
-                    <span class="pub-year">2025</span>
-                    <p><strong>Sinder, J.</strong>, et al. "Biomechanical Analysis of Modern Intramedullary Nails." <em>Journal of Orthopaedic Trauma</em>. <a href="#">Link</a></p>
-                </div>
-                <div class="pub-item">
-                    <span class="pub-year">2024</span>
-                    <p><strong>Sinder, J.</strong>, et al. "Patient Outcomes in Robotic-Assisted Hip Arthroplasty." <em>The Bone & Joint Journal</em>. <a href="#">Link</a></p>
-                </div>
-            </div>
-        </section>
-
-        <section id="news">
-            <h2 class="section-title">News</h2>
-            <div class="news-item">
-                <span class="news-date">Jan 2026</span>
-                <p>The Sinder Lab welcomes new residents for the Spring rotation.</p>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2 class="section-title">Contact Us</h2>
-            <p>Department of Orthopaedics<br>
-            University Hospital, Suite 100<br>
-            Email: <a href="mailto:sinderlab@university.edu">sinderlab@university.edu</a></p>
-        </section>
     </main>
 
     <footer>
@@ -95,16 +53,6 @@
             <p>&copy; 2026 Sinder Lab | Department of Orthopaedics</p>
         </div>
     </footer>
-
-    <script>
-        const navItems = document.querySelectorAll('.nav-item');
-        navItems.forEach(item => {
-            item.addEventListener('click', function() {
-                navItems.forEach(nav => nav.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
-    </script>
 
 </body>
 </html>
