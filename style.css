@@ -1,3 +1,4 @@
+
 /* 1. CORE THEME & VARIABLES */
 :root {
     --primary: #1a202c; 
@@ -180,33 +181,4 @@ footer { padding: 60px 0; border-top: 1px solid var(--border); text-align: cente
     font-size: 0.95rem;
     margin: 2px 0;
 }
-
-    .pub-entry-tight {
-    margin-bottom: 25px; /* Spacing between distinct publications */
-    line-height: 1.5;
-}
-
-.pub-title-blue {
-    color: var(--accent); /* Uses your theme's blue color */
-    font-weight: 700;
-    margin-bottom: 2px !important;
-    font-size: 1rem;
-}
-
-.pub-entry-tight p {
-    margin: 0; 
-    font-size: 0.95rem;
-    color: var(--text);
-}
-
-.pub-entry-tight a {
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.85rem;
-    text-transform: uppercase; /* Makes "PubMed" stand out slightly */
-}
-
-.pub-entry-tight a:hover {
-    text-decoration: underline;
 }
