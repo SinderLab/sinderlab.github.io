@@ -69,6 +69,18 @@ nav a.active {
 
 .pi-section { margin-bottom: 60px; }
 
+/* Updated Image Styling to fix Aspect Ratio */
+.pi-img { 
+    width: 220px !important; 
+    height: 280px !important; 
+    object-fit: cover !important; /* This is the magic fix for stretching */
+    object-position: center top;  /* Ensures the crop focuses on your head/shoulders */
+    flex-shrink: 0; 
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+/* Ensure the card doesn't squeeze the image */
 .pi-card { 
     display: flex; 
     gap: 40px; 
