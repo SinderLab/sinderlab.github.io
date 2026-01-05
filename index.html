@@ -1,114 +1,90 @@
-:root {
-    --primary: #1a202c; /* Modern Dark Grey/Black */
-    --accent: #3182ce;  /* Clean Blue */
-    --bg: #ffffff;
-    --text: #2d3748;
-    --border: #e2e8f0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sinder Laboratory</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
 
-body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    color: var(--text);
-    background-color: var(--bg);
-    line-height: 1.6;
-}
+    header {
+      margin-bottom: 30px;
+    }
 
-/* TOP NAVIGATION */
-.top-nav {
-    position: sticky;
-    top: 0;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(5px);
-    border-bottom: 1px solid var(--border);
-    z-index: 1000;
-    padding: 15px 0;
-}
+    header h1 {
+      margin-bottom: 5px;
+    }
 
-.nav-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+    }
 
-.lab-name {
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: var(--primary);
-}
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
-}
+    .banner {
+      width: 100%;
+      height: 260px;
+      background: #e0e0e0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #777;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 1.2em;
+      letter-spacing: 1px;
+    }
 
-nav a {
-    text-decoration: none;
-    color: var(--text);
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: color 0.2s;
-}
+    footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #555;
+      border-top: 1px solid #ddd;
+      padding-top: 15px;
+    }
+  </style>
+</head>
+<body>
 
-nav a:hover {
-    color: var(--accent);
-}
+<header>
+  <h1>Sinder Laboratory</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Research</a>
+    <a href="#">People</a>
+    <a href="#
 
-/* CONTENT LAYOUT */
-.content-wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 60px 20px;
-}
+<main>
+  <h2>Welcome to the Sinder Lab</h2>
 
-.hero-section {
-    padding: 40px 0;
-}
+  <p>
+    We explore the <strong>biomechanics of the musculoskeletal system</strong>
+    and study the mechanisms of injury, repair, and regeneration.
+  </p>
 
-h1 {
-    font-size: 2.5rem;
-    color: var(--primary);
-    line-height: 1.2;
-    margin-bottom: 20px;
-}
+  <p>
+    Our research integrates engineering, biology, and translational science
+    to improve bone and connective tissue health.
+  </p>
 
-.lead-text {
-    font-size: 1.25rem;
-    color: #4a5568;
-}
+  <div class="banner">
+    LAB PHOTO OR BANNER IMAGE
+  </div>
+</main>
 
-h2 {
-    margin-top: 50px;
-    font-size: 1.5rem;
-    color: var(--primary);
-}
+<footer>
+  © Sinder Laboratory · Department of Biomedical Engineering
+</footer>
 
-hr {
-    border: 0;
-    border-top: 1px solid var(--border);
-    margin: 40px 0;
-}
-
-/* RESEARCH GRID */
-.project-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.project-card {
-    padding: 20px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-}
-
-.project-card h3 {
-    margin-top: 0;
-    color: var(--accent);
-}
+</body>
+</html>
