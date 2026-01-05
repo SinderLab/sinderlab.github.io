@@ -1,67 +1,114 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The [Lab Name] | Research</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
-</head>
-<body>
+:root {
+    --primary: #1a202c; /* Modern Dark Grey/Black */
+    --accent: #3182ce;  /* Clean Blue */
+    --bg: #ffffff;
+    --text: #2d3748;
+    --border: #e2e8f0;
+}
 
-    <aside class="sidebar">
-        <div class="sidebar-header">
-            <div class="lab-logo"></div>
-            <h1>[Lab Name]</h1>
-            <p>University Research Group</p>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Research Projects</a></li>
-                <li><a href="#people">Our Team</a></li>
-                <li><a href="#papers">Publications</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </aside>
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    color: var(--text);
+    background-color: var(--bg);
+    line-height: 1.6;
+}
 
-    <main class="content">
-        
-        <section id="about">
-            <h2>About the Lab</h2>
-            <p class="large-text">We use computational and experimental tools to study <strong>[Your Topic]</strong>. Our mission is to [Mission Statement].</p>
-        </section>
+/* TOP NAVIGATION */
+.top-nav {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+    padding: 15px 0;
+}
 
-        <section id="projects">
-            <h2>Current Research</h2>
-            <div class="project-grid">
-                <div class="project-box">
-                    <span class="tag">Active</span>
-                    <h3>Project Alpha</h3>
-                    <p>Exploring the intersection of X and Y using high-throughput sequencing.</p>
-                </div>
-                <div class="project-box">
-                    <span class="tag">Active</span>
-                    <h3>Project Beta</h3>
-                    <p>Investigating the dynamics of Z in environmental stressors.</p>
-                </div>
-            </div>
-        </section>
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
 
-        <section id="people">
-            <h2>The Team</h2>
-            <div class="people-list">
-                <div class="person-row">
-                    <strong>Dr. [Your Name]</strong> — Principal Investigator
-                </div>
-                <div class="person-row">
-                    <strong>[Name]</strong> — Postdoctoral Researcher
-                </div>
-                </div>
-        </section>
+.lab-name {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--primary);
+}
 
-    </main>
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
 
-</body>
-</html>
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* CONTENT LAYOUT */
+.content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.hero-section {
+    padding: 40px 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.lead-text {
+    font-size: 1.25rem;
+    color: #4a5568;
+}
+
+h2 {
+    margin-top: 50px;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 40px 0;
+}
+
+/* RESEARCH GRID */
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.project-card {
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: var(--accent);
+}
