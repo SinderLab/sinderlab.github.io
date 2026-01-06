@@ -52,7 +52,6 @@ nav a {
     color: var(--text); 
     font-weight: 600; 
     font-size: 0.85rem; 
-    padding: 5px 0;
 }
 
 nav a.active {
@@ -85,15 +84,18 @@ nav a.active {
 
 .pub-citation { margin-top: 4px; font-size: 0.95rem; }
 
-.pubmed-link {
-    color: var(--accent);
-    font-weight: 600;
-    font-size: 0.82rem;
-    text-transform: uppercase;
-    text-decoration: none;
+/* 4. TEAM PAGE */
+
+/* Unified Title Styling (Blue, Bold, Uppercase) */
+.member-title, .member-role { 
+    font-weight: 700; 
+    color: var(--accent); 
+    font-size: 0.85rem; 
+    text-transform: uppercase; 
+    margin-bottom: 15px; 
+    letter-spacing: 0.5px;
 }
 
-/* 4. TEAM PAGE (Large Portrait Images) */
 .pi-card { 
     display: flex; 
     gap: 40px; 
@@ -110,11 +112,11 @@ nav a.active {
     height: 280px !important; 
     object-fit: cover; 
     border-radius: 8px;
+    border: 1px solid var(--border);
 }
 
 .team-grid { 
     display: grid; 
-    /* This forces 2-wide on desktop */
     grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); 
     gap: 40px; 
     margin-top: 30px;
@@ -124,13 +126,13 @@ nav a.active {
     border: 1px solid var(--border); 
     padding: 40px 30px; 
     border-radius: 12px; 
-    text-align: center; /* Keeping original alignment */
+    text-align: center; 
     background: #fff;
 }
 
 .team-card .member-image {
-    width: 200px;  /* Enlarged from previous version */
-    height: 250px; /* Portrait ratio to match PI style */
+    width: 200px;  
+    height: 250px; 
     margin: 0 auto 20px;
     border-radius: 8px;
     object-fit: cover;
@@ -140,8 +142,7 @@ nav a.active {
 }
 
 .member-name { font-size: 1.3rem; font-weight: 700; color: var(--primary); margin: 15px 0 5px; }
-.member-role { font-weight: 700; color: var(--accent); font-size: 0.85rem; text-transform: uppercase; margin-bottom: 15px; }
-.member-desc { font-size: 0.95rem; color: var(--text); }
+.member-desc, .member-bio { font-size: 0.95rem; color: var(--text); }
 
 /* 5. FOOTER */
 footer { 
