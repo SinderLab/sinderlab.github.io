@@ -8,6 +8,11 @@
     --light-blue: #f8fbff;
 }
 
+.page-content { 
+    /* Increased top padding to 100px to match the "Team" page feel */
+    padding: 100px 0 60px 0; 
+}
+
 * { box-sizing: border-box; }
 
 body { 
@@ -69,10 +74,11 @@ nav a.active {
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    margin-top: 20px;    /* NEW: Adds space above the "Selected Publications" line */
-    margin-bottom: 50px; /* Space below the line before the first paper */
+    /* margin-top is removed here because the .page-content padding 
+       now handles the heavy lifting, ensuring all pages match. */
+    margin-bottom: 60px; 
     border-bottom: 2px solid #edf2f7; 
-    padding-bottom: 15px;
+    padding-bottom: 20px;
 }
 
 .publications-list {
