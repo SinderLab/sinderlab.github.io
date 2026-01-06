@@ -64,6 +64,7 @@ nav a.active {
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
+    margin-top: 16px;    /* This adds roughly one line (12pt/16px) of space */
     margin-bottom: 50px; 
     border-bottom: 2px solid #edf2f7; 
     padding-bottom: 15px;
