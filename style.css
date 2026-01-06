@@ -10,7 +10,7 @@
 
 .page-content { 
     /* Increased top padding to 100px to match the "Team" page feel */
-    padding: 100px 0 60px 0; 
+    padding: 50px 0 60px 0; 
 }
 
 * { box-sizing: border-box; }
