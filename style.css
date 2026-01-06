@@ -154,9 +154,42 @@ footer {
     margin-top: 80px; 
 }
 
-/* 6. RESPONSIVE */
+/* 6. RESPONSIVE ADJUSTMENTS */
 @media (max-width: 800px) {
-    .pi-card { flex-direction: column; align-items: center; text-align: center; }
-    .team-grid { grid-template-columns: 1fr; }
-    .pub-header { flex-direction: column; align-items: flex-start; gap: 20px; }
+    /* Forces the logo and nav to stack so the logo stays on top */
+    .nav-flex { 
+        flex-direction: column; 
+        gap: 15px; 
+        text-align: center;
+    }
+
+    /* Shrinks the gap between nav links so they fit left-to-right on one line */
+    nav ul { 
+        gap: 12px; 
+        justify-content: center;
+        flex-wrap: wrap; /* Allows links to wrap to a 3rd line if the screen is very narrow */
+    }
+
+    nav a {
+        font-size: 0.8rem; /* Slightly smaller text for mobile fit */
+    }
+
+    /* Team Page Mobile Fixes */
+    .pi-card { 
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+    }
+    
+    .team-grid { 
+        grid-template-columns: 1fr; 
+    }
+
+    /* Publications Mobile Fixes */
+    .pub-header { 
+        flex-direction: column; 
+        align-items: center; 
+        gap: 20px; 
+        text-align: center;
+    }
 }
