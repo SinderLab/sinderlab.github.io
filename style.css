@@ -1,3 +1,4 @@
+
 /* 1. CORE THEME & VARIABLES */
 :root {
     --primary: #1a202c; 
@@ -64,7 +65,7 @@ nav a.active { color: var(--accent) !important; border-bottom: 2px solid var(--a
 .pub-title-grey { color: var(--primary) !important; font-weight: 800; font-size: 1.1rem; line-height: 1.25; }
 .pub-citation { margin-top: 4px; font-size: 0.95rem; }
 
-/* 4. TEAM PAGE (Safari-Fixed Section) */
+/* 4. TEAM PAGE */
 .member-title, .member-role { 
     font-weight: 700; 
     color: var(--accent); 
@@ -101,9 +102,9 @@ nav a.active { color: var(--accent) !important; border-bottom: 2px solid var(--a
     background: #fff;
 }
 
-/* UNIFIED IMAGE BOXING (Crucial for Safari) */
+/* IMAGE BOXING LOGIC - FIXES SAFARI ISSUE */
 .photo-container {
-    position: relative; /* Forces Safari to anchor the images here */
+    position: relative; /* Anchor for absolute images */
     overflow: hidden;
     border-radius: 8px;
     border: 1px solid var(--border);
@@ -111,31 +112,35 @@ nav a.active { color: var(--accent) !important; border-bottom: 2px solid var(--a
     margin: 0 auto 20px;
 }
 
-/* Fix sizing for the PI photo specifically in Safari */
-.pi-card .photo-container {
-    width: 220px !important;
-    min-width: 220px !important; /* Prevents Safari from shrinking it */
-    height: 280px !important;
-    flex-shrink: 0; /* Ensures the flexbox doesn't crush the image */
-}
-
-/* Fix sizing for Lab Members */
+/* Specific sizing for Lab Members */
 .team-card .photo-container {
     width: 200px;
     height: 250px;
 }
 
-/* Image stacking logic */
+/* Specific sizing for PI Card */
+.pi-card .photo-container {
+    width: 220px;
+    height: 280px;
+    flex-shrink: 0; /* Prevents Safari from collapsing the width */
+}
+
+/* Unified image stacking */
 .photo-container img {
-    position: absolute; /* Stack images on top of each other */
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+    position: absolute; /* Stack on top of each other */
+    top: 0;
+    left: 0;
     transition: opacity 0.4s ease-in-out;
 }
+
+.hover-1 { opacity: 0; } /* Hide the alternate by default */
+
+.member-name { font-size: 1.3rem; font-weight: 700; color: var(--primary); margin: 15px 0 5px; }
+.member-desc, .member-bio { font-size: 0.95rem; color: var(--text); }
 
 /* 5. FOOTER */
 footer { padding: 60px 0; border-top: 1px solid var(--border); text-align: center; font-size: 0.85rem; color: #a0aec0; margin-top: 80px; }
@@ -146,7 +151,6 @@ footer { padding: 60px 0; border-top: 1px solid var(--border); text-align: cente
     nav ul { gap: 12px; justify-content: center; flex-wrap: wrap; }
     nav a { font-size: 0.8rem; }
     .pi-card { flex-direction: column; align-items: center; text-align: center; }
-    .pi-card .photo-container { margin-bottom: 20px; }
     .team-grid { grid-template-columns: 1fr; }
     .pub-header { flex-direction: column; align-items: center; gap: 20px; text-align: center; }
 }
