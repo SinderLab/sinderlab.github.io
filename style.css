@@ -154,3 +154,21 @@ footer { padding: 60px 0; border-top: 1px solid var(--border); text-align: cente
     .team-grid { grid-template-columns: 1fr; }
     .pub-header { flex-direction: column; align-items: center; gap: 20px; text-align: center; }
 }
+
+
+/* NEWS PAGE STYLES */
+.news-image-sm {
+    width: 120px !important;    /* Reduced width */
+    min-width: 120px !important; /* Safari fix */
+    height: 120px !important;   /* Square look */
+    border-radius: 50%;         /* Optional: makes the headshot a circle */
+}
+
+/* Ensure the layout handles the smaller image correctly */
+.news-item {
+    display: flex;
+    gap: 25px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border);
+    align-items: flex-start;
+}
