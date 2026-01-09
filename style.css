@@ -6,6 +6,7 @@
     --text: #4a5568;
     --border: #e2e8f0;
     --light-blue: #f8fbff;
+    --slate-grey: #718096; /* Professional Grey for Titles */
 }
 
 * { box-sizing: border-box; }
@@ -62,17 +63,14 @@ nav a.active { color: var(--accent) !important; border-bottom: 2px solid var(--a
 
 .team-card { border: 1px solid var(--border); padding: 40px 30px; border-radius: 12px; text-align: center; }
 
-/* The container that holds the alternating images */
 .photo-container {
     position: relative; overflow: hidden; border-radius: 8px;
     border: 1px solid var(--border); background: #edf2f7;
 }
 
-/* Specific Sizes */
 .pi-photo-container { width: 220px; height: 280px; flex-shrink: 0; }
 .team-card .photo-container { width: 200px; height: 250px; margin: 0 auto 20px; }
 
-/* Stacking logic for Team only */
 .photo-container img {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
     object-fit: cover; transition: opacity 0.4s ease-in-out;
@@ -92,7 +90,6 @@ nav a.active { color: var(--accent) !important; border-bottom: 2px solid var(--a
     border: 1px solid var(--border); position: relative;
 }
 
-/* Override the 'absolute' team rule for News images */
 .news-img-static {
     position: static !important; width: 100% !important; height: 100% !important;
     object-fit: cover; display: block !important;
@@ -120,53 +117,11 @@ footer { padding: 60px 0; border-top: 1px solid var(--border); text-align: cente
     .news-item { flex-direction: column; }
 }
 
-/* 7. PUBLICATIONS PAGE FIXES */
-.publications-list { 
-    display: flex; 
-    flex-direction: column; 
-    gap: 50px;           /* Significant space between each paper */
-    margin-top: 40px; 
-}
+/* 7. PUBLICATIONS PAGE */
 
-.pub-item {
-    padding-bottom: 20px;
-    border-bottom: 1px solid #f0f4f8; /* Subtle line between papers */
-}
-
-.pub-item:last-child {
-    border-bottom: none;
-}
-
-.pub-title-grey { 
-    color: var(--primary); 
-    font-weight: 800; 
-    font-size: 1.15rem; 
-    line-height: 1.4; 
-    margin-bottom: 8px; /* Space between title and authors */
-    display: block;
-    text-decoration: none;
-}
-
-.pub-title-grey:hover {
-    color: var(--accent);
-}
-
-.pub-citation { 
-    font-size: 0.95rem; 
-    color: var(--text); 
-    line-height: 1.5;
-}
-
-.pub-citation strong {
-    color: var(--primary); /* Makes your name or key authors pop */
-}
-
-
-/* PUBLICATIONS SPECIFIC STYLES */
-
-/* 1. Header spacing (Moving down the title) */
+/* Moves title down approx 12pt height + spacing */
 .pub-header {
-    margin-top: 52px; /* Moves title down approx 12pt font + lab standard spacing */
+    margin-top: 52px; 
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -182,19 +137,28 @@ footer { padding: 60px 0; border-top: 1px solid var(--border); text-align: cente
     font-size: 0.9rem;
 }
 
-/* 2. Paper Titles: Bold and Grey */
+.publications-list { 
+    display: flex; 
+    flex-direction: column; 
+    margin-top: 20px; 
+}
+
+.pub-item {
+    margin-bottom: 12pt; /* Exact 12pt spacing between entries */
+    padding-bottom: 12pt;
+    border-bottom: 1px solid #f0f4f8; 
+}
+
+.pub-item:last-child { border-bottom: none; }
+
+/* Paper Titles: Bold and Grey */
 .pub-title-bold-grey {
     font-weight: 800;
-    color: #718096; /* Professional Slate Grey */
+    color: var(--slate-grey); 
     font-size: 1.1rem;
     line-height: 1.4;
     margin-bottom: 6px;
-}
-
-/* 3. 12pt Spacing between listings */
-.pub-item {
-    margin-bottom: 12pt; /* Exact 12pt font height spacing */
-    padding-bottom: 12pt;
+    display: block;
 }
 
 .pub-citation {
@@ -203,6 +167,8 @@ footer { padding: 60px 0; border-top: 1px solid var(--border); text-align: cente
     line-height: 1.5;
 }
 
+.pub-citation strong { color: var(--primary); }
+
 .pm-link {
     color: var(--accent);
     text-decoration: none;
@@ -210,6 +176,4 @@ footer { padding: 60px 0; border-top: 1px solid var(--border); text-align: cente
     margin-left: 5px;
 }
 
-.pm-link:hover {
-    text-decoration: underline;
-}
+.pm-link:hover { text-decoration: underline; }
