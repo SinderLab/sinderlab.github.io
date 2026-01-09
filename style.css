@@ -187,3 +187,13 @@ footer { padding: 60px 0; border-top: 1px solid var(--border); text-align: cente
     .pub-header { flex-direction: column; align-items: flex-start; gap: 15px; }
     .team-grid { grid-template-columns: 1fr; }
 }
+
+/* News Date Styling */
+.news-date {
+    color: var(--accent); /* Uses your lab's blue color */
+    font-weight: 800;      /* Makes it extra bold */
+    display: block;        /* Puts it on its own line above the title */
+    margin-bottom: 5px;    /* Adds a little space below the date */
+    font-size: 0.9rem;     /* Slightly smaller than main text for a clean look */
+    text-transform: uppercase; /* Optional: makes it look more "news-like" */
+}
