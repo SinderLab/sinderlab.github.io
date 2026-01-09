@@ -21,6 +21,11 @@ body {
 
 .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
 
+/* Global spacing for all main content areas to align titles across pages */
+.page-content {
+    padding-top: 40px !important; 
+}
+
 /* 2. NAVIGATION */
 .navbar {
     position: sticky;
@@ -110,14 +115,8 @@ nav a.active { color: var(--accent) !important; border-bottom: 2px solid var(--a
 @keyframes zoomIn { from {transform: scale(0.8); opacity: 0;} to {transform: scale(1); opacity: 1;} }
 
 /* 6. PUBLICATIONS PAGE */
-/* Standardize the top distance for all pages */
-.page-content {
-    padding-top: 40px; /* Adjust this number to your liking */
-}
-
-/* Remove the specific extra margin from the Pub Header so it matches the others */
 .pub-header {
-    margin-top: 0; 
+    margin-top: 0 !important; 
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -135,7 +134,7 @@ nav a.active { color: var(--accent) !important; border-bottom: 2px solid var(--a
 }
 
 .pub-item {
-    margin-bottom: 12pt; /* Exact 12pt font spacing between listings */
+    margin-bottom: 12pt; 
     padding-bottom: 12pt;
     border-bottom: 1px solid #f7fafc; 
 }
@@ -170,7 +169,13 @@ nav a.active { color: var(--accent) !important; border-bottom: 2px solid var(--a
 .pm-link:hover { text-decoration: underline; }
 
 /* 7. FOOTER & TITLES */
-.section-title { font-size: 1.8rem; font-weight: 800; color: var(--primary); }
+.section-title { 
+    font-size: 1.8rem; 
+    font-weight: 800; 
+    color: var(--primary); 
+    margin-top: 0 !important; /* Resets individual page overrides */
+}
+
 .member-name { font-size: 1.3rem; font-weight: 700; color: var(--primary); margin: 15px 0 5px; }
 .member-title { font-weight: 700; color: var(--accent); font-size: 0.85rem; text-transform: uppercase; margin-bottom: 10px; display: block;}
 footer { padding: 60px 0; border-top: 1px solid var(--border); text-align: center; font-size: 0.85rem; color: #a0aec0; margin-top: 80px; }
