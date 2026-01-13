@@ -187,9 +187,10 @@
         </div>
     </main>
 
-    <div id="imageModal" class="modal">
-        <img class="modal-content" id="img01">
-    </div>
+<div id="imageModal" class="modal">
+    <img class="modal-content" id="img01">
+    <video class="modal-content" id="video01" controls style="display:none; max-height: 80vh;"></video>
+</div>
 
     <footer>
         <div class="container">
@@ -198,18 +199,40 @@
     </footer>
 
     <script>
-        const modal = document.getElementById("imageModal");
-        const modalImg = document.getElementById("img01");
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("img01");
+    const modalVideo = document.getElementById("video01");
 
-        document.querySelectorAll('.enlarge-trigger').forEach(link => {
-            link.onclick = function(e) {
-                e.preventDefault();
-                modal.style.display = "flex";
-                modalImg.src = this.href;
-            }
-        });
+    // Handle Image Clicks
+    document.querySelectorAll('.enlarge-trigger').forEach(link => {
+        link.onclick = function(e) {
+            e.preventDefault();
+            modalVideo.style.display = "none"; // Hide video player
+            modalVideo.pause();                // Stop video if it was playing
+            modalImg.style.display = "block";  // Show image
+            modal.style.display = "flex";
+            modalImg.src = this.href;
+        }
+    });
 
-        modal.onclick = function() { modal.style.display = "none"; }
-    </script>
+    // Handle Video Clicks
+    document.querySelectorAll('.video-trigger').forEach(link => {
+        link.onclick = function(e) {
+            e.preventDefault();
+            modalImg.style.display = "none";    // Hide image
+            modalVideo.style.display = "block"; // Show video player
+            modal.style.display = "flex";
+            modalVideo.src = this.href;
+            modalVideo.play();                  // Auto-play when zoomed
+        }
+    });
+
+    // Close Modal when clicking outside
+    modal.onclick = function() { 
+        modal.style.display = "none"; 
+        modalVideo.pause(); 
+        modalVideo.src = ""; // Clear source to stop loading in background
+    }
+</script>
 </body>
 </html>
