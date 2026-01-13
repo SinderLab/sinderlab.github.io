@@ -6,6 +6,30 @@
     <title>Research | Sinder Lab</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Specific override for Research Page to make images big */
+        .research-item {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 60px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .research-img-large {
+            width: 100%;
+            height: 400px; /* Increased height */
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        @media (max-width: 768px) {
+            .research-img-large {
+                height: 250px; /* Adjusted for mobile */
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="navbar">
@@ -26,34 +50,35 @@
 
     <main class="container page-content">
         <h2 class="section-title">Current Research Areas</h2>
-        <div class="grid">
+        
+        <div class="research-list">
             
-            <div class="card">
-                <div class="news-img-frame" style="margin-bottom: 15px;">
-                    <img src="mechanics.jpg" alt="Bone Mechanical Loading" class="news-img-static">
+            <article class="research-item">
+                <img src="mechanics.jpg" alt="Bone Mechanical Loading" class="research-img-large">
+                <div class="research-text">
+                    <span class="tag">Biomechanics</span>
+                    <h3 style="font-size: 1.8rem; margin: 10px 0;">The Response of the Skeleton to Mechanical Load</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.6;">Our lab investigates how bone cells sense and respond to physical forces to maintain skeletal integrity. By utilizing advanced imaging and mechanical testing, we explore the molecular pathways that translate mechanical signals into new bone formation. This work is critical for developing interventions that can mimic the benefits of exercise for patients with limited mobility.</p>
                 </div>
-                <span class="tag">Biomechanics</span>
-                <h3>The Response of the Skeleton to Mechanical Load</h3>
-                <p>Our lab investigates how bone cells sense and respond to physical forces to maintain skeletal integrity. By utilizing advanced imaging and mechanical testing, we explore the molecular pathways that translate mechanical signals into new bone formation.</p>
-            </div>
+            </article>
 
-            <div class="card">
-                <div class="news-img-frame" style="margin-bottom: 15px;">
-                    <img src="OI_research.jpg" alt="Osteogenesis Imperfecta Research" class="news-img-static">
+            <article class="research-item">
+                <img src="OI_research.jpg" alt="Osteogenesis Imperfecta Research" class="research-img-large">
+                <div class="research-text">
+                    <span class="tag">Rare Disease</span>
+                    <h3 style="font-size: 1.8rem; margin: 10px 0;">New Treatments for Osteogenesis Imperfecta</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.6;">Osteogenesis Imperfecta (OI), or "brittle bone disease," is a genetic disorder characterized by bone fragility and frequent fractures. Our research focuses on identifying novel pharmacological targets to improve bone quality and reduce fracture risk in OI patients. We examine the interplay between collagen mutations and bone mineral density to evaluate the efficacy of emerging therapeutic agents.</p>
                 </div>
-                <span class="tag">Rare Disease</span>
-                <h3>New Treatments for Osteogenesis Imperfecta</h3>
-                <p>Osteogenesis Imperfecta (OI), or "brittle bone disease," is a genetic disorder characterized by bone fragility. Our research focuses on identifying novel pharmacological targets to improve bone quality and reduce fracture risk in OI patients.</p>
-            </div>
+            </article>
 
-            <div class="card">
-                <div class="news-img-frame" style="margin-bottom: 15px;">
-                    <img src="growth.jpg" alt="Skeletal Growth Modeling" class="news-img-static">
+            <article class="research-item">
+                <img src="growth.jpg" alt="Skeletal Growth Modeling" class="research-img-large">
+                <div class="research-text">
+                    <span class="tag">Developmental</span>
+                    <h3 style="font-size: 1.8rem; margin: 10px 0;">Skeletal Modeling During Growth</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.6;">We study the dynamic process of skeletal modeling to understand how bones achieve their final size, shape, and strength during maturation. This research tracks the spatial and temporal changes in bone geometry and microarchitecture from early development through adulthood. By mapping these patterns, we aim to identify the windows of opportunity where clinical interventions can most effectively optimize lifelong skeletal health.</p>
                 </div>
-                <span class="tag">Developmental</span>
-                <h3>Skeletal Modeling During Growth</h3>
-                <p>We study the dynamic process of skeletal modeling to understand how bones achieve their final size and strength. This research tracks spatial and temporal changes in bone geometry from early development through adulthood.</p>
-            </div>
+            </article>
 
         </div>
     </main>
