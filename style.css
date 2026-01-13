@@ -233,3 +233,28 @@ footer { padding: 60px 0; border-top: 1px solid var(--border); text-align: cente
     .team-grid { grid-template-columns: 1fr; }
     .news-date { min-width: auto; margin-bottom: 5px; }
 }
+
+/* Mobile Responsive Navigation */
+@media (max-width: 768px) {
+    .nav-flex {
+        flex-direction: column; /* Stacks logo on top of nav */
+        align-items: center;    /* Centers everything */
+        padding: 15px 0;
+    }
+
+    .navbar nav ul {
+        flex-wrap: wrap;       /* Allows links to wrap to a new line if needed */
+        justify-content: center;
+        padding: 0;
+        margin-top: 15px;      /* Space between logo and links */
+        gap: 10px;             /* Space between individual links */
+    }
+
+    .navbar nav ul li {
+        margin: 5px 10px;      /* Horizontal and vertical spacing for links */
+    }
+
+    .logo {
+        margin-bottom: 10px;   /* Extra breathing room under the logo */
+    }
+}
