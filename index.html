@@ -32,9 +32,39 @@
                 Welcome to the <strong>Sinder Lab</strong> at the Department of Orthopaedics at the UConn Health Center! 
             </p>
             
-            <div class="hero-image-placeholder">
-                <span>Group Photo / Lab Mission Image Placeholder</span>
-            </div>
+         <section class="hero">
+    <h1>Advancing research in Orthopaedics.</h1>
+    <p class="description">
+        Welcome to the <strong>Sinder Lab</strong> at the Department of Orthopaedics at the UConn Health Center! 
+    </p>
+    
+    <div class="hero-slideshow">
+        <img src="fall_color.jpg" alt="Lab Research 1" class="hero-slide active">
+        <img src="MSI.jpeg" alt="Lab Research 2" class="hero-slide">
+        <img src="lab.jpg" alt="Lab Research 3" class="hero-slide">
+    </div>
+</section>
+
+<script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.hero-slide');
+
+    function rotateSlides() {
+        // Remove active class from current slide
+        slides[slideIndex].classList.remove('active');
+        
+        // Move to next slide
+        slideIndex = (slideIndex + 1) % slides.length;
+        
+        // Add active class to next slide
+        slides[slideIndex].classList.add('active');
+    }
+
+    // Set rotation to 5 seconds (5000 milliseconds)
+    setInterval(rotateSlides, 5000);
+</script>
+
+            
         </section>
 
         <hr class="divider">
